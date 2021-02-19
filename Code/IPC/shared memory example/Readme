@@ -1,0 +1,12 @@
+These programs illustrates the usage of shared memory between two process
+in Linux. There are two files containing C programs, client.c and server.c.
+The server process creates a shared membery segment and writes some characters
+in it. It then waits for the first character in the shared memory to become
+'*', and then exits. The client process reads characters from this shared
+memory and prints them out on the terminal, writes '*' at the beginning of
+the shared memory segment, and then exits.
+
+Compile these programs using the makefile provided and then run them on
+two different terminals. First run the server program and then the client
+program.
+
