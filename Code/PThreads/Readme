@@ -1,0 +1,26 @@
+
+There are five programs that demonstrate the use of various pthread
+commands and synchronization opeartions. 
+
+pgm1.c: The main thread creates two new threads. The main thread writes whole
+numbers in a file called whole_num, one thread executes odd( ) function that 
+writes odd numbers in a file called odd_num, and the other thread executes 
+even( ) function that writes even numbers in a file called even_num.
+
+pgm2.c: Same as pgm1 except that the threads are created with specific 
+parameters instead of default parameters, and write on the standard output. 
+
+pgm3.c: Same as pgm2 except that the threads used mutexes to synchronize 
+their writes. Explain the difference in the outputs between pgm2 and pgm3.
+
+pgm4.c: A solution for producer consumer problem using pThreads. In this 
+program the buffer is of size 1. Modify the program for a buffer of size
+larger than 1.
+
+pgm5.c: A solution for dining philosophers problem suing pThreads. How is this
+solution different from the one we discussed in class.
+
+Run make to compile, or use the following command for each program:
+
+   gcc -o object_filename filename -lpthread
+
